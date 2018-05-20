@@ -1,3 +1,5 @@
+from typing import Tuple, List, Set, Dict
+
 from AirConditining import AirConditining
 from HairDrier import HairDrier
 from Refrigerator import Refrigerator

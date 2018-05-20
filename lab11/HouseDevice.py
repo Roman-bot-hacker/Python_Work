@@ -1,6 +1,7 @@
 from abc import ABC
 
 
+
 class HouseDevice(ABC):
 
     device_type = None
