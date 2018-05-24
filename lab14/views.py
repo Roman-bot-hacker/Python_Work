@@ -48,16 +48,12 @@ def device_update(id):
     producer = request.json['producer']
     power = request.json['power']
 
-    old_device = HouseDevice.query.get(id)
-    new_device = HouseDevice()
+    new_device = HouseDevice.query.get(id)
     new_device.device_id = id
     new_device.device_model = model
     new_device.device_producer = producer
     new_device.device_power = power
 
-    db.session.delete(old_device)
-    db.session.commit()
-    db.session.add(new_device)
     db.session.commit()
 
     return new_device.to_string()
